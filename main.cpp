@@ -16,6 +16,8 @@ int maint(){
   istringstream iss;
   cin >> iss;
 
+  cout << iss; 
+
   
   
 
