@@ -1,4 +1,4 @@
-## C++ CLI Calculator (CPPCC)
+## C++ CLI Calculator (CPPCLICALC)
 A fast and efficient command line calculator made using C++ with robust unit testing.
 
 # How to run program:
