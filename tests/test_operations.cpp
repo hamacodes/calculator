@@ -1,4 +1,4 @@
-#include "catch_amalgamated.hpp"
+#include "catch_amalgamated.hpp" // From Catch2's Github
 #include "../Operations.h"
 #include <stdexcept>
 
@@ -23,7 +23,7 @@ TEST_CASE("Testing multiplication", "[multiply]") {
 TEST_CASE("Testing division", "[divide]") {
     REQUIRE(divide(6, 3) == 2);
     REQUIRE(divide(-4, -2) == 2);
-    REQUIRE(divide(5, 2) == Approx(2.5));
+    REQUIRE(divide(5, 2) == Catch::Approx(2.5));
 }
 
 TEST_CASE("Testing division by zero", "[divide]") {
