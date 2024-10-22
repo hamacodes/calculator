@@ -62,6 +62,12 @@ void Calculator::run() {
         break;
     }
 
+    // Display the result
+    if (validOperation) {
+      std::cout << "Result: " << result << "\n";
+    }
   }
 
+  // Exit or stop program message:
+  std::cout << "Goodbye!\n";
 }
