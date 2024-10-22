@@ -12,7 +12,28 @@ void Calculator::run() {
   char op;
 
   std::cout << "Alas, Hama's CPP Calculator\n";
-  std::cout << "Enter expressions in the format: [number] [operator] number\n";
+  std::cout << "Enter expressions in the format: [number] [operator] [number]\n";
   std::cout << "For example: 3 + 4\n";
   std::cout << "Type 'exit' to quit.\n";
+
+  while (true) {
+    std::cout << "> ";
+    std::getline(std::cin, input);  // Grab the user input
+
+    // Exit condition
+    if (input == "exit") {
+      break;
+    }
+
+    // Parse the user input
+    std::istringstream iss(input);
+
+    // Invalid input checking
+    if (!(iss >> num1 >> op >> num2)) {
+      std::cout << "Invalid input. Please enter in '[number] [operator] [number]' format.\n";
+      continue;
+    }
+
+  }
+
 }
