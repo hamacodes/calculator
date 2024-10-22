@@ -51,7 +51,7 @@ void Calculator::run() {
       case '/':
         if (num2 == 0) {
           std::cout << "Error! Division by zero is undefined.\n";
-          validOperation = false
+          validOperation = false;
         } else {
           result = divide(num1, num2);
         }
