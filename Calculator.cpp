@@ -34,6 +34,34 @@ void Calculator::run() {
       continue;
     }
 
+    double result;
+    bool validOperation = true;
+
+    // Perform the operation
+    switch(op) {
+      case '+':
+        result = add(num1, num2);
+        break;
+      case '-':
+        result = subtract(num1, num2);
+        break;
+      case '*':
+        result = multiply(num1, num2);
+        break;
+      case '/':
+        if (num2 == 0) {
+          std::cout << "Error! Division by zero is undefined.\n";
+          validOperation = false
+        } else {
+          result = divide(num1, num2);
+        }
+        break;
+      default:
+        std::cout << "Unknown operator: " << op << "\n";
+        validOperation = false;
+        break;
+    }
+
   }
 
 }
