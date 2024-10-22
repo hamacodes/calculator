@@ -17,4 +17,5 @@ double divide(double a, double b) {
   if (b != 0) {  // Ensure divide cannot be called with b = 0
     return a / b;
   }
+  return -1; // Indicate error (user is trying to divide by 0)
 }
