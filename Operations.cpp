@@ -1,4 +1,7 @@
+#include <stdexcept>  // For std::runtime_error
+
 #include "Operations.h"
+
 
 double add(double a, double b) {
   return a + b;
@@ -14,8 +17,8 @@ double multiply(double a, double b) {
 }
 
 double divide(double a, double b) {
-  if (b != 0) {  // Ensure divide cannot be called with b = 0
-    return a / b;
+  if (b == 0) {
+    throw std::runtime_error("Division by zero");
   }
-  return -1; // Indicate error (user is trying to divide by 0)
+  return a / b;
 }
